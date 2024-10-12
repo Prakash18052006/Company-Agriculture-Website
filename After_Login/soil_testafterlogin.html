@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../Data_Soil_samples/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ 
+    <title>Soil-Test after login</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">
+                <img src="../images/logo.png" alt="Krashak Innovative Solution Logo" width="50" height="30"
+                    class="d-inline-block align-top">
+                    Your Company Name
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 w-100 justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutafterlogin.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./soil_testafterlogin.html">Soil Test</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./soil_dataafterlogin.html">Soil Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactafterlogin.html">Contact</a>
+                    </li>
+                    <a href="../index.html" target="~blank">Go to Logout</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1>Now you can Soil Test of your soil sample :)
+        Now You Are LogIn
+    </h1>
+    <section id="blog"></section>
+        <h1>Soil Health Insights</h1>
+        <article>
+            <h2>Importance of Monitoring Soil Health</h2>
+            <p>Soil health is one of the most crucial factors in ensuring sustainable agricultural production. By regularly monitoring key soil parameters such as moisture, pH levels, nitrogen content, and organic matter, farmers can optimize crop yield and maintain soil fertility. Understanding soil texture also plays an essential role in determining the right cultivation and irrigation methods.</p>
+            <p>Regular soil testing can help identify nutrient deficiencies, pH imbalances, and other issues that could affect plant growth. Proper soil management enhances soil structure, retains moisture, and supports the ecosystem of beneficial organisms.</p>
+        </article>
+    </section>
+
+    <h1>Soil Sample Data Entry</h1>
+    <form action="../Data_Soil_samples/submit_soil.php" method="POST">
+        <label for="moisture">Moisture (%)</label>
+        <input type="number" step="0.01" name="moisture" id="moisture" min="0" max="100" required><br>
+
+        <label for="ph_level">pH Level (0 - 14)</label>
+        <input type="number" step="0.01" name="ph_level" id="ph_level" min="0" max="14" required><br>
+
+        <label for="texture">Soil Texture</label>
+        <select name="texture" id="texture" required>
+            <option value="Sandy">Sandy</option>
+            <option value="Loamy">Loamy</option>
+            <option value="Clay">Clay</option>
+            <option value="Silty">Silty</option>
+        </select><br>
+
+        <label for="nitrogen_level">Nitrogen Level (%)</label>
+        <input type="number" step="0.01" name="nitrogen_level" id="nitrogen_level" min="0" max="3" required><br>
+
+        <label for="organic_matter">Organic Matter (%)</label>
+        <input type="number" step="0.01" name="organic_matter" id="organic_matter" min="0" max="10" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+</html>
